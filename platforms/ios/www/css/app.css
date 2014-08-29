@@ -1,0 +1,7 @@
+.rating-item .button {
+    font-size: 12px;
+}
+
+.rating-item .button-bar > .button {
+    padding: 0px;
+}
