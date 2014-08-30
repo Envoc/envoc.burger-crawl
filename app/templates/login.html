@@ -1,5 +1,5 @@
-<ion-view title="Log In">
-  <ion-content class="padding">
+<ion-view title="Log In" hide-back-button="true">
+  <ion-content class="padding" ng-controller="LoginCtrl as loginCtrl">
     <div class="list list-inset">
       <label class="item item-input">
         <input type="text" placeholder="Username">
@@ -22,5 +22,20 @@
     <a class="button button-assertive button-block" href="#/history">
       Submit
     </a>
+
+    <button class="button button-block button-positive" 
+      ng-click="loginCtrl.login('google')">
+        Login with Google
+    </button>
+    <button class="button button-block button-outline button-assertive button-outline" 
+      ng-click="loginCtrl.logout()" ng-show="app.user">
+        Logout
+    </button>
+
+    <!-- Logged-in user text -->
+    <div class="card">
+      <div class="item item-text-wrap" ng-hide="app.user">User not logged in</div>
+      <div class="item item-text-wrap" ng-show="app.user" ng-bind="app.user.uid"></div>
+    </div>
   </ion-content>
 </ion-view>
