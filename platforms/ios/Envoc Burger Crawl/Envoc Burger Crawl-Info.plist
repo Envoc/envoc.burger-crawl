@@ -79,5 +79,10 @@
     </array>
     <key>CFBundleShortVersionString</key>
     <string>0.0.1</string>
+    <key>ExternalHosts</key>
+    <array>
+      <string>*.firebaseio.com</string>
+      <string>auth.firebase.com</string>
+    </array>
   </dict>
 </plist>

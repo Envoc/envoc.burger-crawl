@@ -28,6 +28,12 @@
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
+    <feature name="Cookies">
+        <param name="ios-package" value="CDVCookies" />
+    </feature>
     <name>Envoc Burger Crawl</name>
     <description>
         A quest for the best burger in Baton Rouge.
