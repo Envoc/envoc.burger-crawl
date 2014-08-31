@@ -1,60 +1,26 @@
 <ion-view title="Rate It">
-  <ion-content class="padding">
-    <div class="list card" ng-repeat="card in [1,2,3,4]">
+  <ion-content>
+    <div class="padding">
+      <h2>ENVIRONMENT</h2>
+    </div>
+    <div class="list">
       <div class="item item-divider rating-group">
-        ENVIRONMENT
+        External
       </div>
-
-      <div class="rating-sub-group">
-        <div>External</div>
-        <div class="rating-item">
-          <div class="padding">
-            <label>Location</label>
-            <br>
-            <div class="button-bar">
-              <a class="button">In the Boonies</a>
-              <a class="button">Acceptable</a>
-              <a class="button">Great Location</a>
-            </div>
-          </div>
-        </div>
-        <div class="rating-item">
-          <div class="padding">
-            <label>Parking</label>
-            <br>
-            <div class="button-bar">
-              <a class="button">Killin’ me</a>
-              <a class="button">Acceptable</a>
-              <a class="button">Easy as Pie</a>
-            </div>
-          </div>
-        </div>
-        <div>Internal</div>
-        <div class="rating-item">
-          <div class="padding">
-            <label>Hosting / Greeting</label>
-            <br>
-            <div class="button-bar">
-              <a class="button">Attitude</a>
-              <a class="button">Acceptable</a>
-              <a class="button">Accomodating</a>
-            </div>
-          </div>
-        </div>
-        <div class="rating-item">
-          <div class="padding">
-            <label>Instructions on Dining</label>
-            <br>
-            <div class="button-bar">
-              <a class="button">What the Heck?</a>
-              <a class="button">Acceptable</a>
-              <a class="button">Clear as a Bell</a>
-            </div>
-          </div>
-        </div>
-        
+      <div class="item rating-desc">
+        Location
+        <span class="badge badge-assertive">{{value}}</span>
       </div>
-
+      <div class="item range range-positive rating-score">
+        <input type="range" name="volume" min="3" max="7" ng-model="value">
+      </div>
+      <div class="item rating-desc">
+        Parking
+        <span class="badge badge-assertive">{{value2}}</span>
+      </div>
+      <div class="item range range-positive rating-score">
+        <input type="range" name="volume" min="3" max="7" ng-model="value2">
+      </div>
     </div>
   </ion-content>
 </ion-view>

@@ -10,15 +10,15 @@ app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $ur
   $stateProvider
     .state('index', {
       url: '/',
-      templateUrl: 'templates/home.html'
+      templateUrl: 'templates/index.html'
     })
     .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html'
     })
-    .state('history', {
-      url: '/history',
-      templateUrl: 'templates/history.html'
+    .state('home', {
+      url: '/home',
+      templateUrl: 'templates/home.html'
     })
     .state('newRating', {
       url: '/new-rating',
@@ -50,32 +50,20 @@ app.controller('AppCtrl', ["$rootScope", "$state", "authService", function($root
   var vm = this;
 
   vm.user = null;
+  vm.checkingAuth = true;
 
   vm.logout = authService.logout;
 
   init()
   function init(){
     bindLoginListeners();
-    checkInitialLoggedIn();
-  }
-
-  function checkInitialLoggedIn(){
-    authService.auth
-      .$getCurrentUser()
-      .then(function(user){
-        if(user){
-          $state.transitionTo('history')
-        } else {
-          $state.transitionTo('login')
-        }
-      })
   }
 
   function bindLoginListeners(){
     // Upon successful login, set the user object
     $rootScope.$on("$firebaseSimpleLogin:login", function(event, user) {
       vm.user = user;
-      $state.transitionTo('history')
+      $state.transitionTo('home')
     });
 
     // Upon successful logout, reset the user object
@@ -86,7 +74,8 @@ app.controller('AppCtrl', ["$rootScope", "$state", "authService", function($root
         console.log("Cookies cleared!");
       });
 
-      $state.transitionTo('login')
+      $state.transitionTo('index')
+      vm.checkingAuth = false;
     });
 
     // Log any login-related errors to the console

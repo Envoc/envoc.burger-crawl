@@ -1,0 +1,11 @@
+<ion-view title="Burghaz" ng-controller="LoginCtrl as loginCtrl"  hide-back-button="true">
+    <ion-content class="padding">
+        <button class="button button-block button-positive" 
+          ng-click="loginCtrl.login('google')" ng-hide="app.checkingAuth">
+            Login with Google
+        </button>
+        <span ng-show="app.checkingAuth">
+            Loading...
+        </span>
+    </ion-content>
+</ion-view>

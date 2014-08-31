@@ -1,7 +1,6 @@
-.rating-item .button {
-    font-size: 12px;
+.item.rating-desc {
+    border-bottom: none;
 }
-
-.rating-item .button-bar > .button {
-    padding: 0px;
+.item.rating-score {
+    border-top: none;
 }

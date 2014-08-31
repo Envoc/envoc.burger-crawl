@@ -4,15 +4,15 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('index', {
       url: '/',
-      templateUrl: 'templates/home.html'
+      templateUrl: 'templates/index.html'
     })
     .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html'
     })
-    .state('history', {
-      url: '/history',
-      templateUrl: 'templates/history.html'
+    .state('home', {
+      url: '/home',
+      templateUrl: 'templates/home.html'
     })
     .state('newRating', {
       url: '/new-rating',

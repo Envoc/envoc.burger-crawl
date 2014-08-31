@@ -2,32 +2,20 @@ app.controller('AppCtrl', function($rootScope, $state, authService) {
   var vm = this;
 
   vm.user = null;
+  vm.checkingAuth = true;
 
   vm.logout = authService.logout;
 
   init()
   function init(){
     bindLoginListeners();
-    checkInitialLoggedIn();
-  }
-
-  function checkInitialLoggedIn(){
-    authService.auth
-      .$getCurrentUser()
-      .then(function(user){
-        if(user){
-          $state.transitionTo('history')
-        } else {
-          $state.transitionTo('login')
-        }
-      })
   }
 
   function bindLoginListeners(){
     // Upon successful login, set the user object
     $rootScope.$on("$firebaseSimpleLogin:login", function(event, user) {
       vm.user = user;
-      $state.transitionTo('history')
+      $state.transitionTo('home')
     });
 
     // Upon successful logout, reset the user object
@@ -38,7 +26,8 @@ app.controller('AppCtrl', function($rootScope, $state, authService) {
         console.log("Cookies cleared!");
       });
 
-      $state.transitionTo('login')
+      $state.transitionTo('index')
+      vm.checkingAuth = false;
     });
 
     // Log any login-related errors to the console
