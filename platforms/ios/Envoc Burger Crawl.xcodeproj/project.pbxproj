@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		099ED754C4B74260B3349989 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C8E5FDD409E4A05B52AA319 /* CDVInAppBrowser.m */; };
 		0C37D3D3C6524F4CA0F69B28 /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB9B17A22974137973B724C /* IonicKeyboard.m */; };
@@ -45,6 +44,7 @@
 		BCDC2928FAE843DC9A6C23EB /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E7C4708FB44601A36C392A /* CDVDevice.m */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		D9557C3B0ABE48EABBD045D5 /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A4722FCEBC1D49C3956AA2EC /* CDVLogger.m */; };
+		6BA0439D99C14F4D9770C2EA /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E703D8D5DD9460C9F1F96B4 /* CDVLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +121,8 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "Envoc Burger Crawl/config.xml"; sourceTree = "<group>"; };
 		FE668789C8E04FC7810555B2 /* CDVLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVLogger.h; path = org.apache.cordova.console/CDVLogger.h; sourceTree = "<group>"; };
+		0E703D8D5DD9460C9F1F96B4 /* CDVLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLocation.m"; path = "org.apache.cordova.geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		30D65D35B44247DA98A41431 /* CDVLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLocation.h"; path = "org.apache.cordova.geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,8 @@
 				7FF220E4D4904361BA43E1FD /* CDVInAppBrowser.h */,
 				78DD55D1A31C4155BD2E326D /* CDVCookies.m */,
 				073B04878CB849E5A15CED0B /* CDVCookies.h */,
+				0E703D8D5DD9460C9F1F96B4 /* CDVLocation.m */,
+				30D65D35B44247DA98A41431 /* CDVLocation.h */,
 			);
 			name = Plugins;
 			path = "Envoc Burger Crawl/Plugins";
@@ -458,6 +462,7 @@
 				BCDC2928FAE843DC9A6C23EB /* CDVDevice.m in Sources */,
 				099ED754C4B74260B3349989 /* CDVInAppBrowser.m in Sources */,
 				1B51DC1CE59A4C0EAFC6655F /* CDVCookies.m in Sources */,
+				6BA0439D99C14F4D9770C2EA /* CDVLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
