@@ -1,4 +1,4 @@
-app.controller('AppCtrl', function($rootScope, $state, authService) {
+app.controller('AppCtrl', function($rootScope, $state, authService, userService) {
   var vm = this;
 
   vm.user = null;
@@ -14,8 +14,11 @@ app.controller('AppCtrl', function($rootScope, $state, authService) {
   function bindLoginListeners(){
     // Upon successful login, set the user object
     $rootScope.$on("$firebaseSimpleLogin:login", function(event, user) {
-      vm.user = user;
-      $state.transitionTo('home')
+      userService.getSession(user.uid)
+        .then(function(session){
+          vm.user = session;
+          $state.transitionTo('home');
+        })
     });
 
     // Upon successful logout, reset the user object

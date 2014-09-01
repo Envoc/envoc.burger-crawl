@@ -46,7 +46,11 @@ app.run(["$ionicPlatform", function($ionicPlatform) {
 
 app.constant('baseRef', new Firebase("https://envoc-burger-crawl.firebaseio.com/"));
 
-app.controller('AppCtrl', ["$rootScope", "$state", "authService", function($rootScope, $state, authService) {
+app.constant('serviceConfig', {
+  baseUrl: 'http://localhost:8000/'
+});
+
+app.controller('AppCtrl', ["$rootScope", "$state", "authService", "userService", function($rootScope, $state, authService, userService) {
   var vm = this;
 
   vm.user = null;
@@ -62,8 +66,11 @@ app.controller('AppCtrl', ["$rootScope", "$state", "authService", function($root
   function bindLoginListeners(){
     // Upon successful login, set the user object
     $rootScope.$on("$firebaseSimpleLogin:login", function(event, user) {
-      vm.user = user;
-      $state.transitionTo('home')
+      userService.getSession(user.uid)
+        .then(function(session){
+          vm.user = session;
+          $state.transitionTo('home');
+        })
     });
 
     // Upon successful logout, reset the user object
@@ -116,5 +123,18 @@ app.controller('LoginCtrl', ["$firebaseSimpleLogin", "baseRef", "authService", f
     authService.logout();
   };
 }]);
+
+app.service('userService', ["$http", "serviceConfig", function($http, serviceConfig) {
+  var self = this;
+
+  this.getSession = function(uid) {
+    var url = serviceConfig.baseUrl + 'api/authenticate';
+    return $http.post(url, {uid: uid})
+      .then(function(resp) {
+        return resp.data; // user
+      })
+  };
+
+}])
 
 })();

@@ -39,3 +39,7 @@ app.run(function($ionicPlatform) {
 });
 
 app.constant('baseRef', new Firebase("https://envoc-burger-crawl.firebaseio.com/"));
+
+app.constant('serviceConfig', {
+  baseUrl: 'http://localhost:8000/'
+});
