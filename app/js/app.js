@@ -1,4 +1,8 @@
-var app = angular.module('envoc.burger-crawl', ['ionic', 'firebase']);
+var app = angular.module('envoc.burger-crawl', [
+                         'ionic', 
+                         'firebase',
+                         'ngCordova.plugins.geolocation'
+                        ]);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider

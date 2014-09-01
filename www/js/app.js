@@ -4,7 +4,11 @@
 (function(){
 'use strict';
 
-var app = angular.module('envoc.burger-crawl', ['ionic', 'firebase']);
+var app = angular.module('envoc.burger-crawl', [
+                         'ionic', 
+                         'firebase',
+                         'ngCordova.plugins.geolocation'
+                        ]);
 
 app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -105,7 +109,67 @@ app.service('authService', ["$firebaseSimpleLogin", "baseRef", function($firebas
   this.logout = function() {
     self.auth.$logout();
   };
-}])
+}]);
+
+app.service('autocompleteService', ["$q", "$cordovaGeolocation", function($q, $cordovaGeolocation) {
+  var self = this;
+  var service = new google.maps.places.AutocompleteService();
+  var coords = {};
+
+  $cordovaGeolocation.getCurrentPosition().then(function(position) {
+    coords = position.coords;
+  });
+
+  // see: https://developers.google.com/maps/documentation/javascript/reference#QueryAutocompletionRequest
+  self.getQueryPredictions = function(queryAutocompletionRequest) {
+    var dfd = $q.defer();
+
+    if(coords.latitude){
+      queryAutocompletionRequest.location = new google.maps.LatLng(coords.latitude, coords.longitude);
+      queryAutocompletionRequest.radius = 25
+    }
+    
+    service.getQueryPredictions(queryAutocompletionRequest, function callback(predictions, status) {
+      if (status != google.maps.places.PlacesServiceStatus.OK) {
+        dfd.reject(status);
+        return;
+      }
+      dfd.resolve(predictions);
+    });
+
+    return dfd.promise;
+  }
+}]);
+
+app.service('autocompleteService', ["$q", "$cordovaGeolocation", function($q, $cordovaGeolocation) {
+  var self = this;
+  var service = new google.maps.places.AutocompleteService();
+  var coords = {};
+
+  $cordovaGeolocation.getCurrentPosition().then(function(position) {
+    coords = position.coords;
+  });
+
+  // see: https://developers.google.com/maps/documentation/javascript/reference#QueryAutocompletionRequest
+  self.getQueryPredictions = function(queryAutocompletionRequest) {
+    var dfd = $q.defer();
+
+    if(coords.latitude){
+      queryAutocompletionRequest.location = new google.maps.LatLng(coords.latitude, coords.longitude);
+      queryAutocompletionRequest.radius = 25
+    }
+    
+    service.getQueryPredictions(queryAutocompletionRequest, function callback(predictions, status) {
+      if (status != google.maps.places.PlacesServiceStatus.OK) {
+        dfd.reject(status);
+        return;
+      }
+      dfd.resolve(predictions);
+    });
+
+    return dfd.promise;
+  }
+}]);
 
 app.controller('LoginCtrl', ["$firebaseSimpleLogin", "baseRef", "authService", function($firebaseSimpleLogin, baseRef, authService) {
   var vm = this;
@@ -122,6 +186,23 @@ app.controller('LoginCtrl', ["$firebaseSimpleLogin", "baseRef", "authService", f
   vm.logout = function() {
     authService.logout();
   };
+}]);
+
+app.controller('RatingCtrl', ["autocompleteService", function(autocompleteService) {
+  var vm = this;
+
+  // Logs a user in with inputted provider
+  vm.searchPlaces = function(input) {
+    var query = {input: input};
+    autocompleteService.getQueryPredictions(query)
+      .then(function(predictions){
+        vm.predictions = predictions;
+      }, handleError)
+  };
+
+  function handleError(err){
+    alert(err);
+  }
 }]);
 
 app.service('userService', ["$http", "serviceConfig", function($http, serviceConfig) {

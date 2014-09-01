@@ -1,5 +1,18 @@
-<ion-view title="Rate It">
+<ion-view title="Rate It" ng-controller="RatingCtrl as ratingCtrl">
   <ion-content>
+    <ion-list>
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <input type="text" ng-model="searchQuery" placeholder="Search place">
+        </label>
+        <button class="button button-small button-clear" ng-click="ratingCtrl.searchPlaces(searchQuery)">
+          Search
+        </button>
+      </div>
+      <ion-item ng-repeat="place in ratingCtrl.predictions" class="long">
+        {{place.description}}
+      </ion-item>
+    </ion-list>
     <div class="padding">
       <h2>ENVIRONMENT</h2>
     </div>
