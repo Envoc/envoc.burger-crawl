@@ -1,0 +1,1023 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"keys",
+				"_.keys"
+			],
+			[
+				"consol",
+				"console.time"
+			],
+			[
+				"conso",
+				"console.time"
+			],
+			[
+				"conse",
+				"console.time"
+			],
+			[
+				"cons",
+				"console.time"
+			],
+			[
+				"for",
+				"_.forEach"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"arg",
+				"process.argv"
+			],
+			[
+				"_",
+				"_vendor"
+			],
+			[
+				"fo",
+				"buid_foot.js"
+			],
+			[
+				"bui",
+				"buid_head.js"
+			],
+			[
+				"angular",
+				"angular-ui-router/"
+			],
+			[
+				"remo",
+				"angular: removeClass"
+			],
+			[
+				"el",
+				"angular.element"
+			],
+			[
+				"header",
+				"headerHtml"
+			],
+			[
+				"sort",
+				"sortable"
+			],
+			[
+				"config",
+				"config2"
+			],
+			[
+				"calcP",
+				"calcPageStop"
+			],
+			[
+				"calc",
+				"calcPageStart"
+			],
+			[
+				"request",
+				"request"
+			],
+			[
+				"eval",
+				"angular: $evalAsync"
+			],
+			[
+				"dataS",
+				"dataSrcUrl"
+			],
+			[
+				"start",
+				"startFrom"
+			],
+			[
+				"root",
+				"angular: $rootScope"
+			],
+			[
+				"direct",
+				"directivelong	Angular.js"
+			],
+			[
+				"http",
+				"angular: $httpBackend"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"clo",
+				"Project: Close"
+			],
+			[
+				"ref",
+				"Project: Refresh Folders"
+			],
+			[
+				"close ",
+				"Project: Close"
+			],
+			[
+				"pro",
+				"Project: Save As"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"git diff",
+				"Git: Diff All Files"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"pretty",
+				"HTMLPrettify"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"retty",
+				"HTMLPrettify"
+			],
+			[
+				"git reset",
+				"Git: Reset (hard) HEAD"
+			],
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"prev",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mark",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"CASE",
+				"Convert Case: Lower Case"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"lore",
+				"LoremIpsum: (30) lots"
+			],
+			[
+				"bs list",
+				"Snippet: bs3-list-group"
+			],
+			[
+				"bs table",
+				"Snippet: bs3-table"
+			],
+			[
+				"bs col 8",
+				"Snippet: bs3-col-8"
+			],
+			[
+				"bs-col4",
+				"Snippet: bs3-col-4"
+			],
+			[
+				"settings",
+				"Preferences: Settings - User"
+			],
+			[
+				"git rese",
+				"Git: Reset (hard) HEAD"
+			],
+			[
+				"bs jum",
+				"Snippet: bs3-jumbotron"
+			],
+			[
+				"bs nav",
+				"Snippet: bs3-navbar"
+			],
+			[
+				"git re",
+				"Git: Reset (unstage) All"
+			],
+			[
+				"git a",
+				"Git: Add..."
+			],
+			[
+				"snippetmaker",
+				"SnippetMaker: Make Snippet"
+			],
+			[
+				"bs form",
+				"Snippet: bs3-form"
+			],
+			[
+				"rename",
+				"File: Rename"
+			],
+			[
+				"renam",
+				"File: Rename"
+			],
+			[
+				"prett",
+				"HTMLPrettify: Set Prettify Preferences"
+			],
+			[
+				"previ",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"git",
+				"Git: Commit"
+			],
+			[
+				"lorem",
+				"LoremIpsum: (30) lots"
+			],
+			[
+				"jade",
+				"Set Syntax: Jade"
+			],
+			[
+				"bs panel",
+				"Snippet: bs3-panel-heading"
+			],
+			[
+				"bs3 panel",
+				"Snippet: bs3-panel"
+			],
+			[
+				"bst ",
+				"Snippet: bst-table-bordered"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"conver",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"make ",
+				"SnippetMaker: Make Snippet"
+			],
+			[
+				"uplo",
+				"FTPSync: Upload current file"
+			],
+			[
+				"upl",
+				"FTPSync: Upload current file"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/justinobney/dev/envoc.burger-crawl"
+	],
+	"file_history":
+	[
+		"/Users/justinobney/Library/Application Support/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
+		"/Users/justinobney/dev/envoc.burger-crawl/gulpfile.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/templates/new-rating.html",
+		"/Users/justinobney/dev/envoc.burger-crawl/ionic.project",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/js/loginCtrl.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/js/ratingCtrl.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/index.html",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/js/autocompleteService.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/js/appCtrl.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/js/app.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/templates/index.html",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/mout/array/removeAll.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/README.md",
+		"/Users/justinobney/dev/envoc.burger-crawl/platforms/ios/Envoc Burger Crawl/Classes/MainViewController.h",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/lib/util/removeIgnores.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/inquirer/node_modules/cli-color/node_modules/es5-ext/reg-exp/valid-reg-exp.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/gulp-util/lib/replaceExtension.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/js/userService.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/js/authService.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/www/lib/ionic/js/angular-ui/angular-ui-router.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/www/lib/ng-cordova.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/js/ratingCtrl",
+		"/Users/justinobney/dev/envoc.burger-crawl/www/index.html",
+		"/Users/justinobney/dev/envoc.burger-crawl/www/templates/login.html",
+		"/Users/justinobney/dev/envoc.burger-crawl/platforms/ios/cordova/log",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/ng-annotate/node_modules/optimist/example/line_count_options.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/LICENSE",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/templates/home.html",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/templates/history.html",
+		"/Users/justinobney/dev/envoc.burger-crawl/www/css/app.css",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/cardinal/examples/.cardinalrc",
+		"/Users/justinobney/dev/envoc.burger-crawl/.gitignore",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/.bin/ng-annotate",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/glob/test/new-glob-optional-options.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/js/ng-cordova.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/gulp-util/lib/isNull.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/scss/ionic.app.scss",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/bower-registry-client/node_modules/request/tests/server.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/platforms/ios/cordova/lib/start-emulator",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/.bin/shjs",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/templates/std/search-results.std",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/glob/test/cwd-test.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/config.xml",
+		"/Users/justinobney/dev/jobney.pocketchange.api/middleware/index.js",
+		"/Users/justinobney/dev/jobney.pocketchange.api/server.js",
+		"/Users/justinobney/dev/jobney.pocketchange.api/node_modules/gulp/node_modules/gulp-util/lib/isNull.js",
+		"/Users/justinobney/dev/jobney.pocketchange.api/controllers/index.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/handlebars/dist/cjs/handlebars/safe-string.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/cardinal/test/cardinal-smoke.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/templates/login.html",
+		"/Users/justinobney/dev/envoc.burger-crawl/www/js/app.js",
+		"/Users/justinobney/dev/misc_hacks/app.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/mout/object/hasOwn.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/ng-annotate/tests/has_inject.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/platforms/ios/Envoc Burger Crawl/Envoc Burger Crawl-Info.plist",
+		"/Users/justinobney/dev/envoc.burger-crawl/hooks/after_prepare/010_add_platform_class.js",
+		"/Users/justinobney/dev/burgers/config.xml",
+		"/Users/justinobney/dev/burgers/www/js/app.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/www/css/ionic.app.css",
+		"/Users/justinobney/dev/envoc.burger-crawl/www/lib/ionic/scss/_bar.scss",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/mout/lang/isObject.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/buid_head.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/buid_foot.js",
+		"/Users/justinobney/dev/jobney.pocketchange.api/package.json",
+		"/Users/justinobney/dev/jobney.pocketchange.api/controllers/auth.js",
+		"/Users/justinobney/dev/jobney.pocketchange.api/node_modules/body-parser/node_modules/iconv-lite/encodings/dbcs-data.js",
+		"/Users/justinobney/dev/jobney.pocketchange.api/node_modules/body-parser/node_modules/iconv-lite/encodings/dbcs-codec.js",
+		"/Users/justinobney/dev/jobney.pocketchange.api/node_modules/nodemon/node_modules/minimatch/minimatch.js",
+		"/Users/justinobney/dev/jobney.pocketchange.api/node_modules/body-parser/node_modules/bytes/Makefile",
+		"/Users/justinobney/dev/jobney.pocketchange.api/controllers/notes.js",
+		"/Users/justinobney/dev/jobney.pocketchange.api/readme.md",
+		"/Users/justinobney/dev/trello_ex/index.html",
+		"/Users/justinobney/dev/trello_ex/style.css",
+		"/Users/justinobney/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/Users/justinobney/bin/dotfiles/osx/set-defaults.sh",
+		"/Users/justinobney/bin/dotfiles/bash/aliases",
+		"/Users/justinobney/bin/dotfiles/bash/config",
+		"/Users/justinobney/dev/.editorconfig",
+		"/Users/justinobney/.bash_profile",
+		"/Users/justinobney/.bashrc",
+		"/Users/justinobney/bin/dotfiles-learning/bashrc",
+		"/private/var/folders/nn/b6q944sj1x32d9qmg7vvlskw0000gn/T/fz3temp-1/resume.html",
+		"/Users/justinobney/dev/ls-help.txt",
+		"//.editorconfig",
+		"/private/var/folders/nn/b6q944sj1x32d9qmg7vvlskw0000gn/T/fz3temp-1/index.html",
+		"/Users/justinobney/Dropbox/Presentations/sql_sat_2014.md",
+		"/Users/justinobney/dev/barcamp/SimplifyingTechnicalPresentations.md",
+		"/Users/justinobney/dev/jobney.pocketchange/.gitignore",
+		"/Users/justinobney/dev/jobney.survey-admin/.gitignore",
+		"/Users/justinobney/dev/jobney.survey-admin/src/partials/main-nav.tmpl.html",
+		"/Users/justinobney/dev/jobney.survey-admin/src/partials/session-nav-widget.tmpl.html",
+		"/Users/justinobney/dev/jobney.survey-admin/node_modules/karma/node_modules/socket.io/lib/namespace.js",
+		"/Users/justinobney/dev/jobney.survey-admin/node_modules/.bin/ng-html2js",
+		"/Users/justinobney/dev/jobney.survey-admin/src/app/login/login-ctrl.js",
+		"/Users/justinobney/dev/jobney.survey-admin/src/partials/home.tmpl.html",
+		"/Users/justinobney/dev/jobney.survey-admin/src/app/main.js",
+		"/Users/justinobney/dev/jobney.survey-admin/src/app/config.js",
+		"/Users/justinobney/dev/jobney.survey-admin/build/app/app.js",
+		"/Users/justinobney/dev/jobney.survey-admin/node_modules/karma/node_modules/http-proxy/node_modules/pkginfo/examples/all-properties.js",
+		"/Users/justinobney/dev/jobney.survey-admin/gulpfile.js",
+		"/Users/justinobney/dev/jobney.survey-admin/src/app/surveys/survey-layout.tmpl.html",
+		"/Users/justinobney/dev/jobney.survey-admin/src/app/login/login-module.js",
+		"/Users/justinobney/dev/jobney.survey-admin/node_modules/connect-livereload/LICENSE",
+		"/Users/justinobney/dev/jobney.survey-admin/node_modules/karma/node_modules/source-map/build/suffix-utils.jsm",
+		"/Users/justinobney/dev/jobney.survey-admin/node_modules/gulp/node_modules/.bin/semver",
+		"/Users/justinobney/dev/jobney.survey-admin/node_modules/q/CONTRIBUTING.md",
+		"/Users/justinobney/dev/jobney.survey-admin/node_modules/karma/node_modules/optimist/example/line_count_options.js",
+		"/Users/justinobney/dev/jobney.survey-admin/node_modules/karma/credentials",
+		"/Users/justinobney/dev/jobney.survey-admin/src/index.html",
+		"/Users/justinobney/dev/jobney.survey-admin/package.json",
+		"/Users/justinobney/dev/pocketchange.firebase/src/app/login/login-ctrl.js",
+		"/Users/justinobney/dev/joylister_v2/app/scripts/app.js",
+		"/Users/justinobney/dev/joylister_v2/app/views/eventsview.html",
+		"/Users/justinobney/dev/joylister_v2/app/views/eventview.html",
+		"/Users/justinobney/dev/joylister_v2/node_modules/karma/lib/events.js",
+		"/Users/justinobney/dev/joylister_v2/test/spec/controllers/events.js",
+		"/Users/justinobney/dev/joylister_v2/app/scripts/controllers/eventview.js",
+		"/Users/justinobney/dev/joylister_v2/app/scripts/services/event.js",
+		"/Users/justinobney/dev/joylister_v2/app/views/eventbox.html",
+		"/Users/justinobney/dev/joylister_v2/karma-e2e.conf.js",
+		"/Users/justinobney/dev/joylister_v2/Gruntfile.js",
+		"/Users/justinobney/dev/joylister_v2/bower.json",
+		"/Users/justinobney/dev/joylister_v2/package.json",
+		"/Users/justinobney/dev/joylister_v2/node_modules/karma/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/TripleDESKey.as",
+		"/Users/justinobney/dev/joylister_v2/node_modules/grunt-contrib-jshint/node_modules/jshint/data/non-ascii-identifier-start.js",
+		"/Users/justinobney/dev/joylister_v2/app/views/nav.html",
+		"/Users/justinobney/dev/joylister_v2/node_modules/grunt-bower-install/tasks/bower-install.js",
+		"/Users/justinobney/dev/joylister_v2/node_modules/grunt-google-cdn/node_modules/bower/bin/bower"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 154.0,
+		"where_history":
+		[
+			"index.html",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"src=\"",
+			"EventsViewCtrl",
+			"Auth.user()",
+			"src=\"",
+			"connect",
+			"src=\"",
+			"openChatroom",
+			"Chat",
+			"src=\"",
+			"firebaseSimpleLogin:",
+			"$location",
+			"jobney.pocketchange.login",
+			"jobney.angular-starter",
+			"pathRef",
+			"jobney.angular-starter",
+			"angular\n    .module('jobney.angular-starter')\n    .controller('DetailsCtrl', function() {\n        var viewModel = this;\n\n        viewModel.items = [];\n\n        ctor();\n        function ctor(){\n            \n        }\n    });\n",
+			"filed list",
+			"tab",
+			"#00BAFF",
+			"src=\"",
+			"tabs",
+			"src=\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"style=\"display:block;\" src=\"http://fitnesswear.us/weeklyad183/",
+			"style=\"display:block;\" src=\"http://fitnesswear.us/weeklyad181/",
+			"style=\"display:block;\" src=\"http://fitnesswear.us/weeklyad179/",
+			"style=\"display:block;\" src=\"http://fitnesswear.us/weeklyad177/",
+			"style=\"display:block;\" src=\"http://fitnesswear.us/weeklyad174/",
+			"style=\"display:block;\" src=\"http://fitnesswear.us/weeklyad172/",
+			"style=\"display:block;\" src=\"http://fitnesswear.us/weeklyad171/",
+			"style=\"display:block;\" src=\"http://fitnesswear.us/weeklyad170/",
+			"#002e59",
+			"style=\"display:block;\" src=\"http://fitnesswear.us/weeklyad168/",
+			"style=\"display:block;\" src=\"http://fitnesswear.us/weeklyad167/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 112.0
+	},
+	"project": "envoc.burger-crawl.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"rat",
+				"app/js/ratingCtrl"
+			],
+			[
+				"auto",
+				"app/js/autocompleteService.js"
+			],
+			[
+				"ind",
+				"app/index.html"
+			],
+			[
+				"userservice",
+				"app/js/userService.js"
+			],
+			[
+				"appc",
+				"app/js/appCtrl.js"
+			],
+			[
+				"app.",
+				"app/js/app.js"
+			],
+			[
+				"index.html",
+				"app/templates/index.html"
+			],
+			[
+				"index",
+				"app/index.html"
+			],
+			[
+				".css",
+				"www/css/app.css"
+			],
+			[
+				"app",
+				"app/js/app.js"
+			],
+			[
+				"ng-co",
+				"www/lib/ng-cordova.js"
+			],
+			[
+				"new",
+				"app/templates/new-rating.html"
+			],
+			[
+				"home",
+				"app/templates/home.html"
+			],
+			[
+				"server",
+				"node_modules/bower/node_modules/bower-registry-client/node_modules/request/tests/server.js"
+			],
+			[
+				"ctrl",
+				"app/js/appCtrl.js"
+			],
+			[
+				"inde",
+				"controllers/index.js"
+			],
+			[
+				"app.css",
+				"www/css/app.css"
+			],
+			[
+				"new-rating",
+				"app/templates/new-rating.html"
+			],
+			[
+				"his",
+				"app/templates/history.html"
+			],
+			[
+				"login",
+				"app/templates/login.html"
+			],
+			[
+				"hist",
+				"app/templates/history.html"
+			],
+			[
+				"app.js",
+				"app/js/app.js"
+			],
+			[
+				"ionic",
+				"scss/ionic.app.scss"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"a",
+				"app.js"
+			],
+			[
+				"serv",
+				"server.js"
+			],
+			[
+				"package",
+				"package.json"
+			],
+			[
+				"middle",
+				"middleware/index.js"
+			],
+			[
+				"set",
+				"osx/set-defaults.sh"
+			],
+			[
+				"alia",
+				"bash/aliases"
+			],
+			[
+				"config",
+				"bash/config"
+			],
+			[
+				"ali",
+				"bash/aliases"
+			],
+			[
+				"conf",
+				"bash/config"
+			],
+			[
+				"co",
+				"bash/config"
+			],
+			[
+				"session-nav-widget.tmpl.html",
+				"src/partials/session-nav-widget.tmpl.html"
+			],
+			[
+				"nav",
+				"src/partials/main-nav.tmpl.html"
+			],
+			[
+				"survey-layout.tmpl.html",
+				"src/app/surveys/survey-layout.tmpl.html"
+			],
+			[
+				"sur",
+				"src/app/surveys/survey-module.js"
+			],
+			[
+				"loginctrl",
+				"src/app/login/login-ctrl.js"
+			],
+			[
+				"events",
+				"app/views/eventsview.html"
+			],
+			[
+				"eventv",
+				"app/views/eventview.html"
+			],
+			[
+				"event",
+				"app/scripts/controllers/eventsview.js"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"bower",
+				"bower.json"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"register",
+				"www/src/examples/views/Scrollview/RegisterView.js"
+			],
+			[
+				"route",
+				"config/routes.js"
+			],
+			[
+				"",
+				"target.txt"
+			],
+			[
+				"login.p",
+				"classes/Login.php"
+			],
+			[
+				"not",
+				"views/not_logged_in.php"
+			],
+			[
+				"notl",
+				"views/not_logged_in.php"
+			],
+			[
+				"priv",
+				"app/private.html"
+			],
+			[
+				"logged_in.php",
+				"views/logged_in.php"
+			],
+			[
+				"reg",
+				"register.php"
+			],
+			[
+				"hea",
+				"views/header.php"
+			],
+			[
+				"foot",
+				"footer.php"
+			],
+			[
+				"head",
+				"header.php"
+			],
+			[
+				"logged",
+				"views/logged_in.php"
+			],
+			[
+				"logge",
+				"views/logged_in.php"
+			],
+			[
+				"main",
+				"src/app/main.js"
+			],
+			[
+				"login-m",
+				"src/app/login/login-module.js"
+			],
+			[
+				"main-nav.tmpl.html",
+				"src/partials/main-nav.tmpl.html"
+			],
+			[
+				"det",
+				"src/partials/details.tmpl.html"
+			],
+			[
+				"fire",
+				"src/app/firebase/firebaseHelpers.js"
+			],
+			[
+				"details",
+				"src/partials/details.tmpl.html"
+			],
+			[
+				"details.tmpl.html",
+				"src/partials/details.tmpl.html"
+			],
+			[
+				"otable",
+				"src/datatables/oTable.js"
+			],
+			[
+				"otablede",
+				"src/datatables/oTableDefault.js"
+			],
+			[
+				"otabl",
+				"src/datatables/oTable.js"
+			],
+			[
+				"otablepagination",
+				"src/datatables/oTablePagination.tmpl.html"
+			],
+			[
+				"defa",
+				"src/datatables/oTableDefault.tmpl.html"
+			],
+			[
+				"app_",
+				"_example/datatables/app_service.js"
+			],
+			[
+				"default.h",
+				"src/datatables/oTableDefault.tmpl.html"
+			],
+			[
+				"otabled",
+				"src/datatables/oTableDefault.js"
+			],
+			[
+				"dis",
+				"src/datatables/discovery.md"
+			],
+			[
+				"gu",
+				"gulpfile.js"
+			],
+			[
+				"disc",
+				"src/datatables/discovery.md"
+			],
+			[
+				"pagination",
+				"src/_vendor/ui.bootstrap/src/pagination/pagination.js"
+			],
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"karma",
+				"src/karma.unit.conf.js"
+			],
+			[
+				"o-ta",
+				"src/datatables/o-table.js"
+			],
+			[
+				"ui",
+				"src/_vendor/angular-ui-router/release/angular-ui-router.js"
+			],
+			[
+				"read",
+				"readme.md"
+			],
+			[
+				"ovalidat",
+				"src/validation/oValidateWith.js"
+			],
+			[
+				".giti",
+				".gitignore"
+			],
+			[
+				"layout",
+				"views/layout.jade"
+			],
+			[
+				"users",
+				"routes/users.js"
+			],
+			[
+				"service",
+				"app/service.config.js"
+			],
+			[
+				".svc.js",
+				"app/settings/occurence.svc.js"
+			],
+			[
+				".spec.js",
+				"test/spec/services/occurrence.svc.spec.js"
+			],
+			[
+				"spec.js",
+				"test/spec/controllers/register.ctrl.spec.js"
+			],
+			[
+				"index.",
+				"bin/index.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/dev/jobney.pocketchange.api/envoc.burger-crawl.api.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 198.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

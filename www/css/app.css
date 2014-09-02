@@ -7,3 +7,9 @@
 .item.long {
     white-space: normal;
 }
+.slider-wrap {
+    width: 92%;
+    padding-left: 4%;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}

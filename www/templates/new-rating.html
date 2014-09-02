@@ -22,19 +22,14 @@
       <div class="item item-divider rating-group">
         External
       </div>
-      <div class="item rating-desc">
-        Location
-        <span class="badge badge-assertive">{{value}}</span>
-      </div>
-      <div class="item range range-positive rating-score">
-        <input type="range" name="volume" min="3" max="7" ng-model="value">
-      </div>
-      <div class="item rating-desc">
-        Parking
-        <span class="badge badge-assertive">{{value2}}</span>
-      </div>
-      <div class="item range range-positive rating-score">
-        <input type="range" name="volume" min="3" max="7" ng-model="value2">
+      <div class="item long">
+        <div>
+          Location
+          <span class="badge badge-assertive">{{value}}</span>
+        </div>
+        <div class="slider-wrap">
+          <div slider ng-model="value" start="3" end="7"></div>
+        </div>
       </div>
     </div>
   </ion-content>

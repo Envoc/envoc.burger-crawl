@@ -7,7 +7,8 @@
 var app = angular.module('envoc.burger-crawl', [
   'ionic',
   'firebase',
-  'ngCordova.plugins.geolocation'
+  'ngCordova.plugins.geolocation',
+  'nouislider'
 ]);
 
 app.config(["$stateProvider", "$urlRouterProvider", "$httpProvider", "$sceDelegateProvider", function($stateProvider, $urlRouterProvider, $httpProvider, $sceDelegateProvider) {
@@ -176,23 +177,6 @@ app.controller('LoginCtrl', ["$firebaseSimpleLogin", "baseRef", "authService", f
   vm.logout = function() {
     authService.logout();
   };
-}]);
-
-app.controller('RatingCtrl', ["autocompleteService", function(autocompleteService) {
-  var vm = this;
-
-  // Logs a user in with inputted provider
-  vm.searchPlaces = function(input) {
-    var query = {input: input};
-    autocompleteService.getQueryPredictions(query)
-      .then(function(predictions){
-        vm.predictions = predictions;
-      }, handleError)
-  };
-
-  function handleError(err){
-    alert(err);
-  }
 }]);
 
 app.controller('RatingCtrl', ["$scope", "autocompleteService", function($scope, autocompleteService) {

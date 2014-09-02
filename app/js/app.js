@@ -1,7 +1,8 @@
 var app = angular.module('envoc.burger-crawl', [
   'ionic',
   'firebase',
-  'ngCordova.plugins.geolocation'
+  'ngCordova.plugins.geolocation',
+  'nouislider'
 ]);
 
 app.config(function($stateProvider, $urlRouterProvider, $httpProvider, $sceDelegateProvider) {

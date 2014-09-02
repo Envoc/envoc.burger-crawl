@@ -1,0 +1,138 @@
+{
+    "type": "rating-data",
+    "categories": [
+        {
+            "name": "ENVIRONMENT",
+            "sections": [
+                {
+                    "sectionName": "EXTERNAL",
+                    "metrics": [
+                        {
+                            "name": "Location",
+                            "scores": [
+                                { "value": 0, "description": "In the Boonies" },
+                                { "value": 5, "description": "Great Location" }
+                            ]
+                        },
+                        {
+                            "name": "Parking",
+                            "scores": [
+                                { "value": 0, "description": "Killin’ me" },
+                                { "value": 5, "description": "Easy as Pie" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "INTERNAL",
+                    "metrics": [
+                        {
+                            "name": "Host / Greeting",
+                            "scores": [
+                                { "value": 0, "description": "Copped an Attitude" },
+                                { "value": 5, "description": "Very Accomodating" }
+                            ]
+                        },
+                        {
+                            "name": "Instructions on Dining",
+                            "scores": [
+                                { "value": 0, "description": "What the Heck?" },
+                                { "value": 5, "description": "Clear as a Bell" }
+                            ]
+                        },
+                        {
+                            "name": "Atmosphere",
+                            "scores": [
+                                { "value": 0, "description": "Get me outta here" },
+                                { "value": 5, "description": "I could live here" }
+                            ]
+                        },
+                        {
+                            "name": "Noise Level",
+                            "scores": [
+                                { "value": 0, "description": "What?!?!" },
+                                { "value": 5, "description": "Just Right" }
+                            ]
+                        },
+                        {
+                            "name": "Paying the Bill",
+                            "scores": [
+                                { "value": 0, "description": "What a hassle!" },
+                                { "value": 5, "description": "Please, take my money" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "BURGER",
+            "sections": [
+                {
+                    "sectionName": "INGREDIENTS",
+                    "metrics": [
+                        {
+                            "name": "Customization Options",
+                            "scores": [
+                                { "value": 0, "description" "One size fits all" },
+                                { "value": 7, "description" "Beyond Expectations" }
+                            ]
+                        },
+                        {
+                            "name": "Bun",
+                            "scores": [
+                                { "value": 0, "description" "You call that a bun?" },
+                                { "value": 7, "description" "Beyond Expectations" }
+                            ]
+                        },
+                        {
+                            "name": "Meat",
+                            "scores": [
+                                { "value": 0, "description" "Is this horse or dog?" },
+                                { "value": 7, "description" "Tastes like Prime" }
+                            ]
+                        },
+                        {
+                            "name": "Meat Dressings",
+                            "scores": [
+                                { "value": 0, "description" "Did you sweep the floor?" },
+                                { "value": 7, "description" "Fresh and Varied" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "TASTE",
+                    "metrics": [
+                        {
+                            "name": "Overall Experience",
+                            "scores": [
+                                { "value": 0, "description" "Not Good" },
+                                { "value": 9, "description" "Beyong Expectations" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sectionName": "PORTION",
+                    "metrics": [
+                        {
+                            "name": "Satiability",
+                            "scores": [
+                                { "value": 0, "description" "I am still hungry" },
+                                { "value": 7, "description" "I am bringing some home" }
+                            ]
+                        },
+                        {
+                            "name": "Value for Price",
+                            "scores": [
+                                { "value": 0, "description" "I got ripped of" },
+                                { "value": 7, "description" "I am bringing some home" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

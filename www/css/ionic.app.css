@@ -3112,8 +3112,7 @@ a.subdued {
 
 .bar-subheader {
   top: 44px;
-  display: block;
-  border-bottom: solid 1px #f8f8f8; }
+  display: block; }
 
 .bar-subfooter {
   bottom: 44px;
