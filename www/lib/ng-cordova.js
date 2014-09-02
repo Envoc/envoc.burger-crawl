@@ -1,7 +1,3 @@
-
-angular.module('ngCordova', [
-  'ngCordova.plugins'
-]);
 angular.module('ngCordova.plugins', []);
 
 angular.module('ngCordova.plugins.appAvailability', [])

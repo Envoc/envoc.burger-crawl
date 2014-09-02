@@ -1,10 +1,10 @@
 var app = angular.module('envoc.burger-crawl', [
-                         'ionic', 
-                         'firebase',
-                         'ngCordova.plugins.geolocation'
-                        ]);
+  'ionic',
+  'firebase',
+  'ngCordova.plugins.geolocation'
+]);
 
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider, $httpProvider, $sceDelegateProvider) {
   $stateProvider
     .state('index', {
       url: '/',
@@ -25,6 +25,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/');
+
+  $httpProvider.defaults.useXDomain = true;
+  delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
+  $sceDelegateProvider.resourceUrlWhitelist([
+    // Allow same origin resource loads.
+    'self',
+    // Allow loading from our assets domain.  Notice the difference between * and **.
+    'http://node.justinobney.com/**'
+  ]);
 });
 
 app.run(function($ionicPlatform) {
@@ -45,5 +55,5 @@ app.run(function($ionicPlatform) {
 app.constant('baseRef', new Firebase("https://envoc-burger-crawl.firebaseio.com/"));
 
 app.constant('serviceConfig', {
-  baseUrl: 'http://localhost:8000/'
+  baseUrl: 'http://node.justinobney.com/'
 });

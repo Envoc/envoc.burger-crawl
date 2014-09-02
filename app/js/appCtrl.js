@@ -14,10 +14,12 @@ app.controller('AppCtrl', function($rootScope, $state, authService, userService)
   function bindLoginListeners(){
     // Upon successful login, set the user object
     $rootScope.$on("$firebaseSimpleLogin:login", function(event, user) {
-      userService.getSession(user.uid)
+      userService.getSession(user)
         .then(function(session){
           vm.user = session;
           $state.transitionTo('home');
+        }, function(resp){
+          console.log(resp);
         })
     });
 
