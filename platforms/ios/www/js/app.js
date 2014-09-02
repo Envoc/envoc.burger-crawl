@@ -4,9 +4,13 @@
 (function(){
 'use strict';
 
-var app = angular.module('envoc.burger-crawl', ['ionic', 'firebase']);
+var app = angular.module('envoc.burger-crawl', [
+  'ionic',
+  'firebase',
+  'ngCordova.plugins.geolocation'
+]);
 
-app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
+app.config(["$stateProvider", "$urlRouterProvider", "$httpProvider", "$sceDelegateProvider", function($stateProvider, $urlRouterProvider, $httpProvider, $sceDelegateProvider) {
   $stateProvider
     .state('index', {
       url: '/',
@@ -27,6 +31,16 @@ app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $ur
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/');
+
+  $httpProvider.defaults.useXDomain = true;
+  delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
+  $sceDelegateProvider.resourceUrlWhitelist([
+    // Allow same origin resource loads.
+    'self',
+    // Allow loading from our assets domain.  Notice the difference between * and **.
+    'http://node.justinobney.com/**'
+  ]);
 }]);
 
 app.run(["$ionicPlatform", function($ionicPlatform) {
@@ -46,7 +60,11 @@ app.run(["$ionicPlatform", function($ionicPlatform) {
 
 app.constant('baseRef', new Firebase("https://envoc-burger-crawl.firebaseio.com/"));
 
-app.controller('AppCtrl', ["$rootScope", "$state", "authService", function($rootScope, $state, authService) {
+app.constant('serviceConfig', {
+  baseUrl: 'http://node.justinobney.com/'
+});
+
+app.controller('AppCtrl', ["$rootScope", "$state", "authService", "userService", function($rootScope, $state, authService, userService) {
   var vm = this;
 
   vm.user = null;
@@ -62,8 +80,13 @@ app.controller('AppCtrl', ["$rootScope", "$state", "authService", function($root
   function bindLoginListeners(){
     // Upon successful login, set the user object
     $rootScope.$on("$firebaseSimpleLogin:login", function(event, user) {
-      vm.user = user;
-      $state.transitionTo('home')
+      userService.getSession(user)
+        .then(function(session){
+          vm.user = session;
+          $state.transitionTo('home');
+        }, function(resp){
+          console.log(resp);
+        })
     });
 
     // Upon successful logout, reset the user object
@@ -98,7 +121,37 @@ app.service('authService', ["$firebaseSimpleLogin", "baseRef", function($firebas
   this.logout = function() {
     self.auth.$logout();
   };
-}])
+}]);
+
+app.service('autocompleteService', ["$q", "$cordovaGeolocation", function($q, $cordovaGeolocation) {
+  var self = this;
+  var service = new google.maps.places.AutocompleteService();
+  var coords = {};
+
+  $cordovaGeolocation.getCurrentPosition().then(function(position) {
+    coords = position.coords;
+  });
+
+  // see: https://developers.google.com/maps/documentation/javascript/reference#QueryAutocompletionRequest
+  self.getQueryPredictions = function(queryAutocompletionRequest) {
+    var dfd = $q.defer();
+
+    if(coords.latitude){
+      queryAutocompletionRequest.location = new google.maps.LatLng(coords.latitude, coords.longitude);
+      queryAutocompletionRequest.radius = 25
+    }
+    
+    service.getQueryPredictions(queryAutocompletionRequest, function callback(predictions, status) {
+      if (status != google.maps.places.PlacesServiceStatus.OK) {
+        dfd.reject(status);
+        return;
+      }
+      dfd.resolve(predictions);
+    });
+
+    return dfd.promise;
+  }
+}]);
 
 app.controller('LoginCtrl', ["$firebaseSimpleLogin", "baseRef", "authService", function($firebaseSimpleLogin, baseRef, authService) {
   var vm = this;
@@ -116,5 +169,37 @@ app.controller('LoginCtrl', ["$firebaseSimpleLogin", "baseRef", "authService", f
     authService.logout();
   };
 }]);
+
+app.controller('RatingCtrl', ["autocompleteService", function(autocompleteService) {
+  var vm = this;
+
+  // Logs a user in with inputted provider
+  vm.searchPlaces = function(input) {
+    var query = {input: input};
+    autocompleteService.getQueryPredictions(query)
+      .then(function(predictions){
+        vm.predictions = predictions;
+      }, handleError)
+  };
+
+  function handleError(err){
+    alert(err);
+  }
+}]);
+
+app.service('userService', ["$http", "serviceConfig", function($http, serviceConfig) {
+  var self = this;
+
+  this.getSession = function(userInfo) {
+    var url = serviceConfig.baseUrl + 'api/authenticate';
+    return $http.post(url, userInfo)
+      .then(function(resp) {
+        return resp.data; // user
+      }, function(resp){
+        console.log('error', resp);
+      })
+  };
+
+}])
 
 })();

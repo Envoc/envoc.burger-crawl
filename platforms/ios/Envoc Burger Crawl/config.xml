@@ -34,6 +34,9 @@
     <feature name="Cookies">
         <param name="ios-package" value="CDVCookies" />
     </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
     <name>Envoc Burger Crawl</name>
     <description>
         A quest for the best burger in Baton Rouge.
@@ -49,8 +52,5 @@
     <preference name="BackupWebStorage" value="none" />
     <feature name="StatusBar">
         <param name="ios-package" onload="true" value="CDVStatusBar" />
-    </feature>
-    <feature name="Geolocation">
-        <param name="ios-package" value="CDVLocation" />
     </feature>
 </widget>

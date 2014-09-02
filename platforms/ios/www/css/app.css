@@ -4,3 +4,6 @@
 .item.rating-score {
     border-top: none;
 }
+.item.long {
+    white-space: normal;
+}
