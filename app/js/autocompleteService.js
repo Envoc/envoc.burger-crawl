@@ -8,15 +8,23 @@ app.service('autocompleteService', function($q, $cordovaGeolocation) {
   });
 
   // see: https://developers.google.com/maps/documentation/javascript/reference#QueryAutocompletionRequest
-  self.getQueryPredictions = function(queryAutocompletionRequest) {
+  self.getQueryPredictions = function(query) {
     var dfd = $q.defer();
+
+    var queryAutocompletionRequest = {
+      input: query
+    }
 
     if(coords.latitude){
       queryAutocompletionRequest.location = new google.maps.LatLng(coords.latitude, coords.longitude);
-      queryAutocompletionRequest.radius = 25
+      queryAutocompletionRequest.radius = 25;
+      queryAutocompletionRequest.types = ['establishment'];
+      queryAutocompletionRequest.componentRestrictions = {
+        country: 'us'
+      }
     }
     
-    service.getQueryPredictions(queryAutocompletionRequest, function callback(predictions, status) {
+    service.getPlacePredictions(queryAutocompletionRequest, function callback(predictions, status) {
       if (status != google.maps.places.PlacesServiceStatus.OK) {
         dfd.reject(status);
         return;

@@ -3,9 +3,11 @@
     <ion-list>
       <div class="item item-input-inset">
         <label class="item-input-wrapper">
-          <input type="text" ng-model="searchQuery" placeholder="Search place">
+          <input type="text" ng-model="ratingCtrl.searchQuery" 
+            placeholder="Search place">
         </label>
-        <button class="button button-small button-clear" ng-click="ratingCtrl.searchPlaces(searchQuery)">
+        <button class="button button-small button-clear" 
+          ng-click="ratingCtrl.searchPlaces(ratingCtrl.searchQuery)">
           Search
         </button>
       </div>
