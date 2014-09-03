@@ -179,7 +179,7 @@ app.controller('LoginCtrl', ["$firebaseSimpleLogin", "baseRef", "authService", f
   };
 }]);
 
-app.controller('RatingCtrl', ["$scope", "autocompleteService", function($scope, autocompleteService) {
+app.controller('RatingCtrl', ["$scope", "autocompleteService", "categoryService", function($scope, autocompleteService, categoryService) {
   var vm = this;
 
   // Logs a user in with inputted provider
@@ -189,6 +189,8 @@ app.controller('RatingCtrl', ["$scope", "autocompleteService", function($scope, 
         vm.predictions = predictions;
       }, handleError)
   };
+
+  vm.categories = categoryService.categories;
 
   init();
   function init(){
@@ -204,7 +206,19 @@ app.controller('RatingCtrl', ["$scope", "autocompleteService", function($scope, 
   function handleError(err){
     alert(err);
   }
-}]);
+}])
+.service('categoryService', ["$http", function($http){
+  var self = this;
+  
+  self.categories = [];
+
+  init();
+  function init(){
+    $http.get('data/category-data.json').then(function(resp){
+      angular.copy(resp.data.categories, self.categories);
+    });
+  }
+}])
 
 app.service('userService', ["$http", "serviceConfig", function($http, serviceConfig) {
   var self = this;

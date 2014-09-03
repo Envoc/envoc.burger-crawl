@@ -15,20 +15,27 @@
         {{place.description}}
       </ion-item>
     </ion-list>
-    <div class="padding">
-      <h2>ENVIRONMENT</h2>
-    </div>
-    <div class="list">
-      <div class="item item-divider rating-group">
-        External
+    <div ng-repeat="category in ratingCtrl.categories track by $index">
+      <div class="padding">
+        <h2>{{category.name}}</h2>
       </div>
-      <div class="item long">
-        <div>
-          Location
-          <span class="badge badge-assertive">{{value}}</span>
+      <div class="list" ng-repeat="section in category.sections">
+        <div class="item item-divider rating-group">
+          {{section.sectionName}}
         </div>
-        <div class="slider-wrap">
-          <div slider ng-model="value" start="3" end="7"></div>
+        <div class="item long" ng-repeat="metric in section.metrics">
+          <div>
+            {{metric.name}}
+            <span class="badge badge-assertive">{{metric.value}}</span>
+          </div>
+          <div class="slider-wrap">
+            <div slider ng-model="metric.value" 
+              start="{{metric.scores[0].value}}" end="{{metric.scores[1].value}}"></div>
+          </div>
+          <div class="row slider-label">
+            <div class="col">{{metric.scores[0].description}}</div>
+            <div class="col align-right">{{metric.scores[1].description}}</div>
+          </div>
         </div>
       </div>
     </div>

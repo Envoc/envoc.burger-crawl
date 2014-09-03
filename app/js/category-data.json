@@ -74,29 +74,29 @@
                         {
                             "name": "Customization Options",
                             "scores": [
-                                { "value": 0, "description" "One size fits all" },
-                                { "value": 7, "description" "Beyond Expectations" }
+                                { "value": 0, "description": "One size fits all" },
+                                { "value": 7, "description": "Beyond Expectations" }
                             ]
                         },
                         {
                             "name": "Bun",
                             "scores": [
-                                { "value": 0, "description" "You call that a bun?" },
-                                { "value": 7, "description" "Beyond Expectations" }
+                                { "value": 0, "description": "You call that a bun?" },
+                                { "value": 7, "description": "Beyond Expectations" }
                             ]
                         },
                         {
                             "name": "Meat",
                             "scores": [
-                                { "value": 0, "description" "Is this horse or dog?" },
-                                { "value": 7, "description" "Tastes like Prime" }
+                                { "value": 0, "description": "Is this horse or dog?" },
+                                { "value": 7, "description": "Tastes like Prime" }
                             ]
                         },
                         {
                             "name": "Meat Dressings",
                             "scores": [
-                                { "value": 0, "description" "Did you sweep the floor?" },
-                                { "value": 7, "description" "Fresh and Varied" }
+                                { "value": 0, "description": "Did you sweep the floor?" },
+                                { "value": 7, "description": "Fresh and Varied" }
                             ]
                         }
                     ]
@@ -107,8 +107,8 @@
                         {
                             "name": "Overall Experience",
                             "scores": [
-                                { "value": 0, "description" "Not Good" },
-                                { "value": 9, "description" "Beyong Expectations" }
+                                { "value": 0, "description": "Not Good" },
+                                { "value": 9, "description": "Beyong Expectations" }
                             ]
                         }
                     ]
@@ -119,15 +119,49 @@
                         {
                             "name": "Satiability",
                             "scores": [
-                                { "value": 0, "description" "I am still hungry" },
-                                { "value": 7, "description" "I am bringing some home" }
+                                { "value": 0, "description": "I am still hungry" },
+                                { "value": 7, "description": "I am bringing some home" }
                             ]
                         },
                         {
                             "name": "Value for Price",
                             "scores": [
-                                { "value": 0, "description" "I got ripped of" },
-                                { "value": 7, "description" "I am bringing some home" }
+                                { "value": 0, "description": "I got ripped of" },
+                                { "value": 7, "description": "I am bringing some home" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "ACCOMPANYING",
+            "sections": [
+                {
+                    "sectionName": "Side Orders",
+                    "metrics": [
+                        {
+                            "name": "Overall Experience",
+                            "scores": [
+                                { "value": 0, "description": "Not so good" },
+                                { "value": 5, "description": "Lots of choices" }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "SERVICE",
+            "sections": [
+                {
+                    "sectionName": "Staff",
+                    "metrics": [
+                        {
+                            "name": "Overall Experience",
+                            "scores": [
+                                { "value": 0, "description": "Fire them" },
+                                { "value": 5, "description": "Over the top" }
                             ]
                         }
                     ]

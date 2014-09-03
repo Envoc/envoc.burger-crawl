@@ -1,4 +1,4 @@
-app.controller('RatingCtrl', function($scope, autocompleteService) {
+app.controller('RatingCtrl', function($scope, autocompleteService, categoryService) {
   var vm = this;
 
   // Logs a user in with inputted provider
@@ -8,6 +8,8 @@ app.controller('RatingCtrl', function($scope, autocompleteService) {
         vm.predictions = predictions;
       }, handleError)
   };
+
+  vm.categories = categoryService.categories;
 
   init();
   function init(){
@@ -23,4 +25,16 @@ app.controller('RatingCtrl', function($scope, autocompleteService) {
   function handleError(err){
     alert(err);
   }
-});
+})
+.service('categoryService', function($http){
+  var self = this;
+  
+  self.categories = [];
+
+  init();
+  function init(){
+    $http.get('data/category-data.json').then(function(resp){
+      angular.copy(resp.data.categories, self.categories);
+    });
+  }
+})

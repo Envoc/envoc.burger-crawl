@@ -40,6 +40,10 @@ gulp.task('move', function () {
   gulp
     .src(['./app/templates/**/*.html'])
     .pipe(gulp.dest('./www/templates'));
+
+  gulp
+    .src(['./app/js/**/*.json'])
+    .pipe(gulp.dest('./www/data'));
 });
 
 gulp.task('default', ['sass', 'watch']);
