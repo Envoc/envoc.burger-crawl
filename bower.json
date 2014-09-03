@@ -5,6 +5,7 @@
     "ionic": "driftyco/ionic-bower#1.0.0-beta.11"
   },
   "dependencies": {
-    "angular-nouislider": "~0.3.1"
+    "angular-nouislider": "~0.3.1",
+    "lodash": "~2.4.1"
   }
 }

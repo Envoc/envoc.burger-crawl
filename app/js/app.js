@@ -5,7 +5,8 @@ var app = angular.module('envoc.burger-crawl', [
   'nouislider'
 ]);
 
-app.config(function($stateProvider, $urlRouterProvider, $httpProvider, $sceDelegateProvider) {
+app.config(function($stateProvider, $urlRouterProvider, $httpProvider, 
+           $sceDelegateProvider) {
   $stateProvider
     .state('index', {
       url: '/',
@@ -19,8 +20,12 @@ app.config(function($stateProvider, $urlRouterProvider, $httpProvider, $sceDeleg
       url: '/home',
       templateUrl: 'templates/home.html'
     })
-    .state('newRating', {
+    .state('rating', {
       url: '/new-rating',
+      templateUrl: 'templates/rating-setup.html'
+    })
+    .state('rating-categories', {
+      url: '/categories',
       templateUrl: 'templates/new-rating.html'
     });
 
@@ -57,4 +62,5 @@ app.constant('baseRef', new Firebase("https://envoc-burger-crawl.firebaseio.com/
 
 app.constant('serviceConfig', {
   baseUrl: 'http://node.justinobney.com/'
+  //baseUrl: 'http://localhost:8000/'
 });

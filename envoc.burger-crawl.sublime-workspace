@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"catego",
+				"categories"
+			],
+			[
+				"category",
+				"category-data"
+			],
+			[
+				"angula",
+				"angular.copy"
+			],
+			[
+				"j",
+				"jquery/"
+			],
+			[
+				"l",
+				"angular-nouislider/"
+			],
+			[
 				"keys",
 				"_.keys"
 			],
@@ -115,9 +135,25 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 243.0,
 		"selected_items":
 		[
+			[
+				"git diff",
+				"Git: Diff All Files"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
 			[
 				"clo",
 				"Project: Close"
@@ -133,22 +169,6 @@
 			[
 				"pro",
 				"Project: Save As"
-			],
-			[
-				"git pus",
-				"Git: Push"
-			],
-			[
-				"git comm",
-				"Git: Commit"
-			],
-			[
-				"git add",
-				"Git: Add..."
-			],
-			[
-				"git diff",
-				"Git: Diff All Files"
 			],
 			[
 				"javasc",
@@ -360,27 +380,46 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/justinobney/dev/envoc.burger-crawl"
+		"/Users/justinobney/dev/envoc.burger-crawl",
+		"/Users/justinobney/dev/envoc.burger-crawl/merges",
+		"/Users/justinobney/dev/envoc.burger-crawl/www",
+		"/Users/justinobney/dev/envoc.burger-crawl/www/data",
+		"/Users/justinobney/dev/envoc.burger-crawl/www/js"
 	],
 	"file_history":
 	[
-		"/Users/justinobney/Library/Application Support/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
-		"/Users/justinobney/dev/envoc.burger-crawl/gulpfile.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/www/css/app.css",
 		"/Users/justinobney/dev/envoc.burger-crawl/app/templates/new-rating.html",
-		"/Users/justinobney/dev/envoc.burger-crawl/ionic.project",
-		"/Users/justinobney/dev/envoc.burger-crawl/app/js/loginCtrl.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/js/category-data.json",
 		"/Users/justinobney/dev/envoc.burger-crawl/app/js/ratingCtrl.js",
-		"/Users/justinobney/dev/envoc.burger-crawl/app/index.html",
-		"/Users/justinobney/dev/envoc.burger-crawl/app/js/autocompleteService.js",
-		"/Users/justinobney/dev/envoc.burger-crawl/app/js/appCtrl.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/www/js/app.js",
 		"/Users/justinobney/dev/envoc.burger-crawl/app/js/app.js",
-		"/Users/justinobney/dev/envoc.burger-crawl/app/templates/index.html",
+		"/Users/justinobney/dev/envoc.burger-crawl/gulpfile.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/index.html",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/gulp-sass/node_modules/node-sass/node_modules/mocha/lib/reporters/templates/style.html",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/gulp-sass/node_modules/node-sass/node_modules/sinon/test/sinon_test.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/.bin/shjs",
+		"/Users/justinobney/dev/envoc.burger-crawl/www/lib/jquery/src/css.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/cardinal/test/cardinal-smoke.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/config.xml",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/gulp-ng-annotate/test.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/tmp/test-all.sh",
 		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/mout/array/removeAll.js",
 		"/Users/justinobney/dev/envoc.burger-crawl/README.md",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/gulp-util/lib/replaceExtension.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/inquirer/node_modules/cli-color/node_modules/es5-ext/reg-exp/valid-reg-exp.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/mout/string/removeNonWord.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/www/lib/angular-nouislider/src/nouislider.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/www/lib/angular-nouislider/src/nouislider.min.js",
+		"/private/etc/hosts",
+		"/Users/justinobney/Library/Application Support/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
+		"/Users/justinobney/dev/envoc.burger-crawl/ionic.project",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/js/loginCtrl.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/js/autocompleteService.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/js/appCtrl.js",
+		"/Users/justinobney/dev/envoc.burger-crawl/app/templates/index.html",
 		"/Users/justinobney/dev/envoc.burger-crawl/platforms/ios/Envoc Burger Crawl/Classes/MainViewController.h",
 		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/lib/util/removeIgnores.js",
-		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/inquirer/node_modules/cli-color/node_modules/es5-ext/reg-exp/valid-reg-exp.js",
-		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/gulp-util/lib/replaceExtension.js",
 		"/Users/justinobney/dev/envoc.burger-crawl/app/js/userService.js",
 		"/Users/justinobney/dev/envoc.burger-crawl/app/js/authService.js",
 		"/Users/justinobney/dev/envoc.burger-crawl/www/lib/ionic/js/angular-ui/angular-ui-router.js",
@@ -393,7 +432,6 @@
 		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/LICENSE",
 		"/Users/justinobney/dev/envoc.burger-crawl/app/templates/home.html",
 		"/Users/justinobney/dev/envoc.burger-crawl/app/templates/history.html",
-		"/Users/justinobney/dev/envoc.burger-crawl/www/css/app.css",
 		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/cardinal/examples/.cardinalrc",
 		"/Users/justinobney/dev/envoc.burger-crawl/.gitignore",
 		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/.bin/ng-annotate",
@@ -403,18 +441,14 @@
 		"/Users/justinobney/dev/envoc.burger-crawl/scss/ionic.app.scss",
 		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/bower-registry-client/node_modules/request/tests/server.js",
 		"/Users/justinobney/dev/envoc.burger-crawl/platforms/ios/cordova/lib/start-emulator",
-		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/.bin/shjs",
 		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/templates/std/search-results.std",
 		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/glob/test/cwd-test.js",
-		"/Users/justinobney/dev/envoc.burger-crawl/config.xml",
 		"/Users/justinobney/dev/jobney.pocketchange.api/middleware/index.js",
 		"/Users/justinobney/dev/jobney.pocketchange.api/server.js",
 		"/Users/justinobney/dev/jobney.pocketchange.api/node_modules/gulp/node_modules/gulp-util/lib/isNull.js",
 		"/Users/justinobney/dev/jobney.pocketchange.api/controllers/index.js",
 		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/handlebars/dist/cjs/handlebars/safe-string.js",
-		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/cardinal/test/cardinal-smoke.js",
 		"/Users/justinobney/dev/envoc.burger-crawl/app/templates/login.html",
-		"/Users/justinobney/dev/envoc.burger-crawl/www/js/app.js",
 		"/Users/justinobney/dev/misc_hacks/app.js",
 		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/bower/node_modules/mout/object/hasOwn.js",
 		"/Users/justinobney/dev/envoc.burger-crawl/node_modules/ng-annotate/tests/has_inject.js",
@@ -481,27 +515,19 @@
 		"/Users/justinobney/dev/joylister_v2/node_modules/karma/lib/events.js",
 		"/Users/justinobney/dev/joylister_v2/test/spec/controllers/events.js",
 		"/Users/justinobney/dev/joylister_v2/app/scripts/controllers/eventview.js",
-		"/Users/justinobney/dev/joylister_v2/app/scripts/services/event.js",
-		"/Users/justinobney/dev/joylister_v2/app/views/eventbox.html",
-		"/Users/justinobney/dev/joylister_v2/karma-e2e.conf.js",
-		"/Users/justinobney/dev/joylister_v2/Gruntfile.js",
-		"/Users/justinobney/dev/joylister_v2/bower.json",
-		"/Users/justinobney/dev/joylister_v2/package.json",
-		"/Users/justinobney/dev/joylister_v2/node_modules/karma/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/TripleDESKey.as",
-		"/Users/justinobney/dev/joylister_v2/node_modules/grunt-contrib-jshint/node_modules/jshint/data/non-ascii-identifier-start.js",
-		"/Users/justinobney/dev/joylister_v2/app/views/nav.html",
-		"/Users/justinobney/dev/joylister_v2/node_modules/grunt-bower-install/tasks/bower-install.js",
-		"/Users/justinobney/dev/joylister_v2/node_modules/grunt-google-cdn/node_modules/bower/bin/bower"
+		"/Users/justinobney/dev/joylister_v2/app/scripts/services/event.js"
 	],
 	"find":
 	{
-		"height": 30.0
+		"height": 36.0
 	},
 	"find_in_files":
 	{
 		"height": 154.0,
 		"where_history":
 		[
+			"<open files>",
+			"",
 			"index.html",
 			""
 		]
@@ -511,6 +537,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\"description\" \"",
+			"name:",
+			"sections:",
+			"scores:",
+			"sectionName:",
+			"name:",
+			"metrics:",
+			"value:",
+			"description:",
 			"src=\"",
 			"EventsViewCtrl",
 			"Auth.user()",
@@ -540,6 +575,15 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\"description\": \"",
+			"\"name\"",
+			"\"sections\"",
+			"\"scores\"",
+			"\"sectionName\"",
+			"\"name\"",
+			"\"metrics\"",
+			"\"value\"",
+			"\"description\"",
 			"style=\"display:block;\" src=\"http://fitnesswear.us/weeklyad183/",
 			"style=\"display:block;\" src=\"http://fitnesswear.us/weeklyad181/",
 			"style=\"display:block;\" src=\"http://fitnesswear.us/weeklyad179/",
@@ -617,8 +661,32 @@
 		"selected_items":
 		[
 			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"app.",
+				"www/css/app.css"
+			],
+			[
+				"css",
+				"www/lib/jquery/src/css.js"
+			],
+			[
 				"rat",
-				"app/js/ratingCtrl"
+				"app/templates/new-rating.html"
+			],
+			[
+				"app",
+				"app/js/app.js"
+			],
+			[
+				"nouislider.js",
+				"www/lib/angular-nouislider/src/nouislider.js"
+			],
+			[
+				"nouislider.min.js",
+				"www/lib/angular-nouislider/src/nouislider.min.js"
 			],
 			[
 				"auto",
@@ -637,10 +705,6 @@
 				"app/js/appCtrl.js"
 			],
 			[
-				"app.",
-				"app/js/app.js"
-			],
-			[
 				"index.html",
 				"app/templates/index.html"
 			],
@@ -651,10 +715,6 @@
 			[
 				".css",
 				"www/css/app.css"
-			],
-			[
-				"app",
-				"app/js/app.js"
 			],
 			[
 				"ng-co",
@@ -707,10 +767,6 @@
 			[
 				"ionic",
 				"scss/ionic.app.scss"
-			],
-			[
-				"gulp",
-				"gulpfile.js"
 			],
 			[
 				"a",

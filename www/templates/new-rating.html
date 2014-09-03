@@ -1,43 +1,40 @@
 <ion-view title="Rate It" ng-controller="RatingCtrl as ratingCtrl">
   <ion-content>
-    <ion-list>
-      <div class="item item-input-inset">
-        <label class="item-input-wrapper">
-          <input type="text" ng-model="ratingCtrl.searchQuery" 
-            placeholder="Search place">
-        </label>
-        <button class="button button-small button-clear" 
-          ng-click="ratingCtrl.searchPlaces(ratingCtrl.searchQuery)">
-          Search
-        </button>
-      </div>
-      <ion-item ng-repeat="place in ratingCtrl.predictions" class="long">
-        {{place.description}}
-      </ion-item>
-    </ion-list>
+    <div class="padding">
+      <h3>{{ratingCtrl.place.description}}</h3>
+    </div>
     <div ng-repeat="category in ratingCtrl.categories track by $index">
-      <div class="padding">
-        <h2>{{category.name}}</h2>
-      </div>
-      <div class="list" ng-repeat="section in category.sections">
-        <div class="item item-divider rating-group">
-          {{section.sectionName}}
+      <div class="card">
+        <div class="item item-divider category-name">
+          {{category.name}}
         </div>
-        <div class="item long" ng-repeat="metric in section.metrics">
-          <div>
-            {{metric.name}}
-            <span class="badge badge-assertive">{{metric.value}}</span>
+        <div ng-repeat="section in category.sections">
+          <div class="item item-divider rating-group">
+            {{section.sectionName}}
           </div>
-          <div class="slider-wrap">
-            <div slider ng-model="metric.value" 
-              start="{{metric.scores[0].value}}" end="{{metric.scores[1].value}}"></div>
-          </div>
-          <div class="row slider-label">
-            <div class="col">{{metric.scores[0].description}}</div>
-            <div class="col align-right">{{metric.scores[1].description}}</div>
+          <div class="item item-text-wrap" ng-repeat="metric in section.metrics"
+            ng-init="metric.value = metric.scores[1].value">
+            <div>
+              {{metric.name}}
+              <span class="badge badge-assertive">{{metric.value}}</span>
+            </div>
+            <div class="slider-wrap">
+              <div slider ng-model="metric.value" 
+                start="{{metric.scores[0].value}}" end="{{metric.scores[1].value}}"></div>
+            </div>
+            <div class="row slider-label">
+              <div class="col">{{metric.scores[0].description}}</div>
+              <div class="col align-right">{{metric.scores[1].description}}</div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="padding">
+      <button ng-disabled="ratingCtrl.ratingComplete" ng-click="ratingCtrl.submitRating(app.user)"
+        class="button button-assertive button-block">
+        Send Rating
+      </button>
     </div>
   </ion-content>
 </ion-view>
