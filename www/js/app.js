@@ -71,8 +71,8 @@ app.run(["$ionicPlatform", function($ionicPlatform) {
 app.constant('baseRef', new Firebase("https://envoc-burger-crawl.firebaseio.com/"));
 
 app.constant('serviceConfig', {
-  //baseUrl: 'http://node.justinobney.com/'
-  baseUrl: 'http://localhost:8000/'
+  baseUrl: 'http://node.justinobney.com/'
+  //baseUrl: 'http://localhost:8000/'
 });
 
 app.controller('AppCtrl', ["$rootScope", "$state", "authService", "userService", function($rootScope, $state, authService, userService) {

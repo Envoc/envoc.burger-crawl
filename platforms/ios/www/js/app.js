@@ -33,6 +33,10 @@ app.config(["$stateProvider", "$urlRouterProvider", "$httpProvider", "$sceDelega
     .state('rating-categories', {
       url: '/categories',
       templateUrl: 'templates/new-rating.html'
+    })
+    .state('my-ratings', {
+      url: '/my-ratings',
+      templateUrl: 'templates/my-ratings.html'
     });
 
   // if none of the above states are matched, use this as the fallback
@@ -89,7 +93,7 @@ app.controller('AppCtrl', ["$rootScope", "$state", "authService", "userService",
     $rootScope.$on("$firebaseSimpleLogin:login", function(event, user) {
       userService.getSession(user)
         .then(function(session){
-          vm.user = session;
+          $rootScope.user = vm.user = session;
           $state.transitionTo('home');
         }, function(resp){
           console.log(resp);
@@ -166,6 +170,30 @@ app.service('autocompleteService', ["$q", "$cordovaGeolocation", function($q, $c
 
     return dfd.promise;
   }
+}]);
+
+app.controller('HistoryCtrl', ["$scope", "$ionicScrollDelegate", "newRatingsService", function($scope, $ionicScrollDelegate, newRatingsService) {
+  var vm = this;
+  vm.ratings = [];
+
+  vm.calcCategoryScore = function(category) {
+    var metrics = _.chain(category.sections).pluck('metrics').flatten();
+    var max = metrics.reduce(getMax, 0).value();
+    var total = metrics.reduce(getTotal, 0).value();
+    
+    return (total + '/' + max);
+  }
+
+  init();
+  function init() {
+    newRatingsService.getHistory($scope.user)
+      .then(function(history) {
+        vm.ratings = history;
+      })
+  }
+
+  function getMax(c, m) { return c + m.scores[1].value; }
+function getTotal(c, m) { return c + m.value; }
 }]);
 
 app.controller('LoginCtrl', ["$firebaseSimpleLogin", "baseRef", "authService", function($firebaseSimpleLogin, baseRef, authService) {
@@ -278,6 +306,13 @@ app.service('newRatingsService', ["$http", "serviceConfig", "keenService", funct
   self.setPlace = function(place) {
     self.place = place;
   };
+
+  self.getHistory = function(user){
+    var url = serviceConfig.baseUrl + 'api/myRatings/';
+    return $http.post(url, {uid: user.id}).then(function(resp){
+      return resp.data
+    });
+  }
 
   self.submitRating = function(rating) {
     var url = serviceConfig.baseUrl + 'api/submitRating';
