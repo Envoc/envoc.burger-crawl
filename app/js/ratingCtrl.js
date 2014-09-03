@@ -92,6 +92,13 @@ app.service('newRatingsService', function($http, serviceConfig, keenService) {
     self.place = place;
   };
 
+  self.getHistory = function(user){
+    var url = serviceConfig.baseUrl + 'api/myRatings/';
+    return $http.post(url, {uid: user.id}).then(function(resp){
+      return resp.data
+    });
+  }
+
   self.submitRating = function(rating) {
     var url = serviceConfig.baseUrl + 'api/submitRating';
 

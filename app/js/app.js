@@ -27,6 +27,10 @@ app.config(function($stateProvider, $urlRouterProvider, $httpProvider,
     .state('rating-categories', {
       url: '/categories',
       templateUrl: 'templates/new-rating.html'
+    })
+    .state('my-ratings', {
+      url: '/my-ratings',
+      templateUrl: 'templates/my-ratings.html'
     });
 
   // if none of the above states are matched, use this as the fallback
@@ -61,6 +65,6 @@ app.run(function($ionicPlatform) {
 app.constant('baseRef', new Firebase("https://envoc-burger-crawl.firebaseio.com/"));
 
 app.constant('serviceConfig', {
-  baseUrl: 'http://node.justinobney.com/'
-  //baseUrl: 'http://localhost:8000/'
+  //baseUrl: 'http://node.justinobney.com/'
+  baseUrl: 'http://localhost:8000/'
 });
