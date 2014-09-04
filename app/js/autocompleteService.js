@@ -1,6 +1,7 @@
 app.service('autocompleteService', function($q, $cordovaGeolocation) {
   var self = this;
   var service = new google.maps.places.AutocompleteService();
+  var placeService = new google.maps.places.PlacesService($('<div />')[0]);
   var coords = {};
 
   $cordovaGeolocation.getCurrentPosition().then(function(position) {
@@ -12,19 +13,19 @@ app.service('autocompleteService', function($q, $cordovaGeolocation) {
     var dfd = $q.defer();
 
     var queryAutocompletionRequest = {
-      input: query
+      query: query
     }
 
     if(coords.latitude){
       queryAutocompletionRequest.location = new google.maps.LatLng(coords.latitude, coords.longitude);
       queryAutocompletionRequest.radius = 25;
-      queryAutocompletionRequest.types = ['establishment'];
+      queryAutocompletionRequest.types = ['food'];
       queryAutocompletionRequest.componentRestrictions = {
         country: 'us'
       }
     }
     
-    service.getPlacePredictions(queryAutocompletionRequest, function callback(predictions, status) {
+    placeService.textSearch(queryAutocompletionRequest, function callback(predictions, status) {
       if (status != google.maps.places.PlacesServiceStatus.OK) {
         dfd.reject(status);
         return;
@@ -33,5 +34,9 @@ app.service('autocompleteService', function($q, $cordovaGeolocation) {
     });
 
     return dfd.promise;
+  }
+
+  self.getDetails = function(request, callback){
+    placeService.getDetails(request, callback);
   }
 });

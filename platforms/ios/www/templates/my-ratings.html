@@ -1,0 +1,19 @@
+<ion-view title="History" ng-controller="HistoryCtrl as historyCtrl">
+  <ion-content>
+    <div class="card" ng-repeat="rating in historyCtrl.ratings track by $index">
+      <div class="item item-divider item-text-wrap">
+        {{rating.place.description}}
+      </div>
+      <div ng-repeat="category in rating.categories" class="item item-text-wrap">
+        <div>
+          {{category.name}}
+
+          <span class="badge badge-assertive">
+            {{historyCtrl.calcCategoryScore(category)}}
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="padding"></div>
+  </ion-content>
+</ion-view>

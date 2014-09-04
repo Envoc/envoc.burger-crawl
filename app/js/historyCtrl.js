@@ -19,5 +19,5 @@ app.controller('HistoryCtrl', function($scope, $ionicScrollDelegate, newRatingsS
   }
 
   function getMax(c, m) { return c + m.scores[1].value; }
-function getTotal(c, m) { return c + m.value; }
+  function getTotal(c, m) { return c + m.value; }
 });
