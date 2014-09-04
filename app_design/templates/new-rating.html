@@ -1,0 +1,37 @@
+<ion-view title="Rate It">
+  <ion-content>
+    <div class="padding">
+      <h3>Fat Cow - Burgahz</h3>
+    </div>
+    <div>
+      <div class="card" ng-repeat="item in [1,2,3]">
+        <div class="item item-divider category-name">
+          Environment
+        </div>
+        <div>
+          <div class="item item-divider rating-group">
+            Extenal
+          </div>
+          <div class="item item-text-wrap">
+            <div>
+              Location
+              <span class="badge badge-assertive">3</span>
+            </div>
+            <div class="slider-wrap">
+              <div slider value="3" start="0" end="5"></div>
+            </div>
+            <div class="row slider-label">
+              <div class="col">I'm still hungry</div>
+              <div class="col align-right">I am bringing some home</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="padding">
+      <button class="button button-assertive button-block" ui-sref="home">
+        Send Rating
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

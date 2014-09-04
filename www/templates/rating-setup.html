@@ -3,12 +3,14 @@
     <ion-list>
       <div class="item item-input-inset">
         <input type="text" ng-model="ratingSetupCtrl.searchQuery" 
-            placeholder="Search place">
+            placeholder="Search place" class="google-search">
       </div>
       <ion-item ng-repeat="place in ratingSetupCtrl.predictions" 
         ng-click="ratingSetupCtrl.selectPlace(place)"
         class="item-text-wrap">
-        {{place.description}}
+        <strong>{{place.name}}</strong>
+        <br>
+        {{place.formatted_address}}
       </ion-item>
     </ion-list>
   </ion-content>

@@ -137,6 +137,7 @@ app.service('authService', ["$firebaseSimpleLogin", "baseRef", function($firebas
 app.service('autocompleteService', ["$q", "$cordovaGeolocation", function($q, $cordovaGeolocation) {
   var self = this;
   var service = new google.maps.places.AutocompleteService();
+  var placeService = new google.maps.places.PlacesService($('<div />')[0]);
   var coords = {};
 
   $cordovaGeolocation.getCurrentPosition().then(function(position) {
@@ -148,19 +149,19 @@ app.service('autocompleteService', ["$q", "$cordovaGeolocation", function($q, $c
     var dfd = $q.defer();
 
     var queryAutocompletionRequest = {
-      input: query
+      query: query
     }
 
     if(coords.latitude){
       queryAutocompletionRequest.location = new google.maps.LatLng(coords.latitude, coords.longitude);
       queryAutocompletionRequest.radius = 25;
-      queryAutocompletionRequest.types = ['establishment'];
+      queryAutocompletionRequest.types = ['food'];
       queryAutocompletionRequest.componentRestrictions = {
         country: 'us'
       }
     }
     
-    service.getPlacePredictions(queryAutocompletionRequest, function callback(predictions, status) {
+    placeService.textSearch(queryAutocompletionRequest, function callback(predictions, status) {
       if (status != google.maps.places.PlacesServiceStatus.OK) {
         dfd.reject(status);
         return;
@@ -169,6 +170,10 @@ app.service('autocompleteService', ["$q", "$cordovaGeolocation", function($q, $c
     });
 
     return dfd.promise;
+  }
+
+  self.getDetails = function(request, callback){
+    placeService.getDetails(request, callback);
   }
 }]);
 
@@ -193,7 +198,7 @@ app.controller('HistoryCtrl', ["$scope", "$ionicScrollDelegate", "newRatingsServ
   }
 
   function getMax(c, m) { return c + m.scores[1].value; }
-function getTotal(c, m) { return c + m.value; }
+  function getTotal(c, m) { return c + m.value; }
 }]);
 
 app.controller('LoginCtrl', ["$firebaseSimpleLogin", "baseRef", "authService", function($firebaseSimpleLogin, baseRef, authService) {
@@ -213,8 +218,8 @@ app.controller('LoginCtrl', ["$firebaseSimpleLogin", "baseRef", "authService", f
   };
 }]);
 
-app.controller('RatingCtrl', ["$scope", "$timeout", "$ionicScrollDelegate", "$ionicLoading", "$state", "categoryService", "newRatingsService", function($scope, $timeout, $ionicScrollDelegate, $ionicLoading, 
-               $state, categoryService, newRatingsService) {
+app.controller('RatingCtrl', ["$scope", "$timeout", "$ionicScrollDelegate", "$ionicLoading", "$ionicPopup", "$state", "categoryService", "newRatingsService", function($scope, $timeout, $ionicScrollDelegate, $ionicLoading,
+  $ionicPopup, $state, categoryService, newRatingsService) {
   var vm = this;
   vm.categories = categoryService.categories;
   vm.place = newRatingsService.place;
@@ -229,15 +234,25 @@ app.controller('RatingCtrl', ["$scope", "$timeout", "$ionicScrollDelegate", "$io
       categories: angular.copy(vm.categories),
       place: {
         placeId: vm.place.place_id,
-        description: vm.place.description
+        description: vm.place.name
       }
     };
 
     newRatingsService.submitRating(rating)
-      .then(function(){
+      .then(function() {
         $ionicLoading.hide();
-        $state.transitionTo('home');
+        var successPopup = $ionicPopup.alert({
+          title: 'Rating saved!',
+          template: 'You can view it in history'
+        });
+        successPopup.then(function(res) {
+          $state.transitionTo('home');
+        });
       });
+  }
+
+  vm.setMetricInitValue = function(metric) {
+    metric.value = Math.ceil(metric.scores[1].value / 2)
   }
 
   init();
@@ -248,18 +263,22 @@ app.controller('RatingCtrl', ["$scope", "$timeout", "$ionicScrollDelegate", "$io
     $scope.$watch(function() {
       return vm.categories
     }, function(current) {
-      var options = _.chain($scope.ratingCtrl.categories).map(function(cat) {
-        return cat.sections
-      }).flatten().map(function(section) {
-        return section.metrics
-      }).flatten().pluck('value');
-
-      vm.ratingComplete = (options.value().length != options.reject(removeDefined).value().length);
-
-      function removeDefined(val) {
-        return val == undefined
-      }
+      vm.ratingComplete = areAllMetricsSet(current)
     }, true)
+  }
+
+  function areAllMetricsSet(categories) {
+    var options = _.chain(categories).map(function(cat) {
+      return cat.sections
+    }).flatten().map(function(section) {
+      return section.metrics
+    }).flatten().pluck('value');
+
+    return (options.value().length != options.reject(removeDefined).value().length);
+
+    function removeDefined(val) {
+      return val === undefined
+    }
   }
 }]);
 
@@ -294,7 +313,7 @@ app.controller('RatingSetupCtrl', ["$scope", "$state", "autocompleteService", "n
   }
 
   function handleError(err) {
-    alert(err);
+    console.log(err);
   }
 }]);
 
@@ -307,9 +326,11 @@ app.service('newRatingsService', ["$http", "serviceConfig", "keenService", funct
     self.place = place;
   };
 
-  self.getHistory = function(user){
+  self.getHistory = function(user) {
     var url = serviceConfig.baseUrl + 'api/myRatings/';
-    return $http.post(url, {uid: user.id}).then(function(resp){
+    return $http.post(url, {
+      uid: user.id
+    }).then(function(resp) {
       return resp.data
     });
   }
@@ -331,23 +352,39 @@ app.service('newRatingsService', ["$http", "serviceConfig", "keenService", funct
   function makeKeenScore(rating) {
     var metrics = [];
 
-    _.forEach(rating.categories, function(category) {
-      _.forEach(category.sections, function(section) {
-        _.forEach(section.metrics, function(metric) {
-          keenService.client.addEvent("ratings", {
-            category: category.name,
-            section: section.sectionName,
-            metric: metric.name,
-            value: metric.value,
-            user: rating.user,
-            place: rating.place,
-            keen: {
-              timestamp: new Date().toISOString()
-            }
-          });
-        })
-      })
+    function getMax(c, m) {
+      return c + m.scores[1].value;
+    }
+
+    function getTotal(c, m) {
+      return c + m.value;
+    }
+
+    var calcCategoryScore = function(category) {
+      var metrics = _.chain(category.sections).pluck('metrics').flatten();
+      var max = metrics.reduce(getMax, 0).value();
+      var total = metrics.reduce(getTotal, 0).value();
+
+      return {
+        total: total,
+        max: max,
+        percent: parseFloat((total / max).toFixed(3))
+      };
+    }
+
+    var keenRating = {
+      user: rating.user,
+      place: rating.place,
+      keen: {
+        timestamp: new Date().toISOString()
+      }
+    };
+
+    _.forEach(rating.categories, function(cat) {
+      keenRating[cat.name] = calcCategoryScore(cat)
     })
+
+    keenService.client.addEvent("ratings", keenRating);
 
     return metrics
   }

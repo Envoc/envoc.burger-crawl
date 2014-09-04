@@ -1,7 +1,7 @@
 <ion-view title="Rate It" ng-controller="RatingCtrl as ratingCtrl">
   <ion-content>
     <div class="padding">
-      <h3>{{ratingCtrl.place.description}}</h3>
+      <h3>{{ratingCtrl.place.name}}</h3>
     </div>
     <div ng-repeat="category in ratingCtrl.categories track by $index">
       <div class="card">
@@ -13,7 +13,7 @@
             {{section.sectionName}}
           </div>
           <div class="item item-text-wrap" ng-repeat="metric in section.metrics"
-            ng-init="metric.value = metric.scores[1].value">
+            ng-init="ratingCtrl.setMetricInitValue(metric)">
             <div>
               {{metric.name}}
               <span class="badge badge-assertive">{{metric.value}}</span>

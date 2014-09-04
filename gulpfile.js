@@ -46,7 +46,15 @@ gulp.task('move', function () {
     .pipe(gulp.dest('./www/data'));
 });
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('move-design', function () {
+  gulp
+    .src(['./app_design/templates/**/*.html'])
+    .pipe(gulp.dest('./www/templates'));
+
+  gulp
+    .src(['./app_design/js/**/*.json'])
+    .pipe(gulp.dest('./www/data'));
+});
 
 gulp.task('sass', function(done) {
   gulp.src('./scss/ionic.app.scss')
@@ -80,8 +88,6 @@ gulp.task('git-check', function(done) {
   done();
 });
 
-var base = { base: './src/app/' };
-
 gulp.task('watch', function () {
     gulp.watch(paths.sass, ['sass']);
 
@@ -92,4 +98,18 @@ gulp.task('watch', function () {
     ], ['build']);
 });
 
+gulp.task('watch-design', function () {
+    gulp.watch(paths.sass, ['sass']);
+
+    gulp.watch([
+      './app_design/**/*.html',
+      './app_design/**/*.js',
+    './scss/**/*.scss'
+    ], ['build-design']);
+});
+
+gulp.task('default', ['sass', 'watch']);
+gulp.task('design', ['sass', 'watch-design']);
+
 gulp.task('build', ['sass', 'move', 'js']);
+gulp.task('build-design', ['sass', 'move-design', 'js']);
